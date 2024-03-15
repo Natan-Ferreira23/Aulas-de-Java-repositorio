@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 import java.util.ArrayList;
 public class Exercicio3 {
 public static void main(String[] args) {
@@ -13,7 +13,7 @@ public static void main(String[] args) {
 				+ "1-Adicionar um paciente: essa opção deve adicionar o nome da pessoa no final da fila \n"
 				+ "2-Atender um paciente: o paciente a ser atendido é o que está na primeira posição da fila\n"
 				+ "3-Desistência: remove um paciente da fila, independente da sua posição"
-				+ "4-Verificar posição de um paciente\n"
+				+ "4-\nVerificar posição de um paciente\n"
 				+ "5-Verificar o tamanho da fila.\n"
 				+ "6-Imprimir fila\n "
 				+ "7-Sair \n");
@@ -31,7 +31,7 @@ public static void main(String[] args) {
 				if(fila.size()>0) {
 					System.out.println("O paciente "+ fila.get(0)+ " foi atendido ");
 					fila.remove(0);
-				}{
+				}else{
 					System.out.println("A fila está vazia");
 				}
 				
@@ -49,7 +49,7 @@ public static void main(String[] args) {
 				System.out.println("Digite o nome do paciente para sabermos a posição ");
 				nome=leitura.next();
 				if(fila.contains(nome)) {
-					System.out.println("A posição é ["+fila.indexOf(nome));
+					System.out.println("A posição é ["+fila.indexOf(nome)+"]");
 				}else {
 					System.out.println("Paciente nao encontrado");
 				}
